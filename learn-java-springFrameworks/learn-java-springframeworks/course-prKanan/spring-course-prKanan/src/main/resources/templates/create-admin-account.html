@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<html xmlns:th="www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Yeni admin qeydiyyati</title>
+
+	<style type="text/css">
+		.err{
+		color: red;
+		}
+		</style>
+</head>
+<body>
+<h1>Yeni admin qeydiyyat</h1>
+<a href="/open-our-login">Hesabin movcuddursa giris et</a>
+<hr>
+	<form method="post"th:action="@{/admin/add}"
+	<label>Ad</label>
+	
+	 <input th:field="*{name}"><br>
+	 
+	 <div class="err" th:if="${#fields.hasErrors('name')}"
+	 th:errors="*{name}"></div>
+	 <form method="post"th:action="@{/admin/add}"
+	<label>Istifadeci adi</label>
+	
+	 <input th:field="*{username}"><br>
+	 
+	 <div class="err" th:if="${#fields.hasErrors('username')}"
+	 th:errors="*{username}"></div>
+	 <form method="post"th:action="@{/admin/add}"
+	<label>Sifre</label>
+	
+	 <input th:field="*{password}"><br>
+	 
+	 <div class="err" th:if="${#fields.hasErrors('password')}"
+	 th:errors="*{password}"></div>
+	 <select><br> <input type="submit" value="Yadda saxla"</select>
+	 </form>
+</body>
+</html>

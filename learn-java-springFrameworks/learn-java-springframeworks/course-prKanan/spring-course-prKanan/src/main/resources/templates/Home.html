@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+</head>
+<body>
+<h1>Home</h1>
+<a th:href="@{/Logout}">Tehlukesiz cixis</a>
+<br>
+<a sec:authorize="hasROLE('ROLE MANAGER')"
+<a th:href="@{/manager}">Manager</a>
+</body>
+</html>

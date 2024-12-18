@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<form method="post" th:action="@{/user/forget-pass-confirm}" th:object="${user}"><label>Istifadeci adi</label>
+<input th:field="*{username}"><br>
+
+<input type="submit" value="Kod Gonder">
+</body>
+</html>

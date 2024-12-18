@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tələbə Formu</title>
+</head>
+<body>
+    <h1>Tələbə Məlumatlarını Daxil Edin</h1>
+    <form th:action="@{/student}" th:object="${student}" method="post">
+        Ad: <input type="text" th:field="*{name}" /><br/>
+        İstifadəçi adı: <input type="text" th:field="*{username}" /><br/>
+        Şifrə: <input type="password" th:field="*{password}" /><br/>
+        Aktivdir? <input type="checkbox" th:field="*{enabled}" />
+        <br/>
+        <input type="submit" value="Təsdiq et"/>
+    </form>
+</body>
+</html>
